@@ -83,5 +83,5 @@ RUN curl -kfSL https://github.com/gogo-easy/ngr/archive/v${NGR_VERSION}.tar.gz -
     && cd ngr-${NGR_VERSION} \
     && make install \
     && cd /tmp \
-    && v${NGR_VERSION}.tar.gz
+    && rm -rf v${NGR_VERSION}.tar.gz
 ENTRYPOINT ["ngr", "start", "-d=off"]
